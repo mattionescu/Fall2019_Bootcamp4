@@ -21,8 +21,6 @@ class AddBuilding extends React.Component {
                 longitude: this.longitude.value
             };
         }
-
-        data.id = this.props.dataSize + 1;
         console.log('tried adding data: ', data);
 
         return data;

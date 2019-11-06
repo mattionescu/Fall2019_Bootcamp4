@@ -12,7 +12,8 @@ class App extends React.Component {
       filterText: '',
       selectedBuilding: 0,
       data: this.props.data,
-      addBuildingText: ''
+      addBuildingText: '',
+      nextId: this.props.data.length + 1
     };
   }
 
@@ -86,6 +87,11 @@ class App extends React.Component {
       console.log('building exists');
       return;
     }
+
+    bldgData.id = this.state.nextId;
+    this.setState({
+      nextId: this.state.nextId + 1
+    });
 
     let dataArr = this.state.data;
 
